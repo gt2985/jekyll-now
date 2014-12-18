@@ -14,13 +14,15 @@ Please see below a simple example of how it can be done.
 
 Maven dependencies needed :
 
-```xml
+```
 		 <dependency>
               <groupId>org.powermock</groupId>
               <artifactId>powermock-module-junit4</artifactId>
               <version>1.5</version>
               <scope>test</scope>                  
           </dependency>
+```
+```
           <dependency>
               <groupId>org.powermock</groupId>
               <artifactId>powermock-api-mockito</artifactId>
@@ -37,18 +39,18 @@ Java code for exmaple/reference
   		}
   	}
   	
-  	import org.junit.Assert;
-  	import org.junit.Test;
-  	import org.junit.runner.RunWith;
-  	import org.powermock.modules.junit4.PowerMockRunner;
-  	import org.powermock.reflect.Whitebox;
-  	
-  	@RunWith(PowerMockRunner.class)
-  	public class PrivateMethodClassTest {
-  	
-  		@Test
-	        public void testingthePrivateMethod() {
-	            PrivateMethodClass classinTest = new PrivateMethodClass();
-	            Assert.assertTrue(Whitebox.<Boolean>invokeMethod(classinTest, "imAPrivateMethod"));
-	        }
-	}
+    	 import org.junit.Assert;
+  		import org.junit.Test;
+  		import org.junit.runner.RunWith;
+  		import org.powermock.modules.junit4.PowerMockRunner;
+  		import org.powermock.reflect.Whitebox;
+        
+        @RunWith(PowerMockRunner.class)
+        public class PrivateMethodClassTest {
+        
+            @Test
+                public void testingthePrivateMethod() {
+                    PrivateMethodClass classinTest = new PrivateMethodClass();
+                    Assert.assertTrue(Whitebox.<Boolean>invokeMethod(classinTest, "imAPrivateMethod"));
+                }
+        }
