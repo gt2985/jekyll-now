@@ -14,7 +14,7 @@ Please see below a simple example of how it can be done.
 
 Maven dependencies needed :
 <pre><code>
-&lt;dependency&gt;
+	&lt;dependency&gt;
           &lt;groupId&gt;org.powermock&lt;/groupId&gt;
           &lt;artifactId&gt;powermock-module-junit4&lt;/artifactId&gt;
           &lt;version&gt;1.5&lt;/version&gt;
@@ -45,13 +45,12 @@ The class in test
 <pre><code>
 public class PrivateMethodClass {
 
-    private boolean imAPrivateMethod() {
-        return true;
-    }
-}
-</code></pre>	
-The junit test class will like something below.
-Pay attention to the `@RunWith` annotation.
+	private boolean imAPrivateMethod() {
+	    return true;
+	} 
+} </code></pre>
+
+The junit test class will like something below. Pay attention to the `@RunWith` annotation.
 
 <pre><code>
 import org.junit.Assert;
@@ -63,10 +62,12 @@ import org.powermock.reflect.Whitebox;
 @RunWith(PowerMockRunner.class)
 public class PrivateMethodClassTest {
 
-    @Test
-    public void testingthePrivateMethod() {
-        PrivateMethodClass classinTest = new PrivateMethodClass();
-        Assert.assertTrue(Whitebox.<Boolean>invokeMethod(classinTest, "imAPrivateMethod"));
-    }
-}
+	@Test
+	public void testingthePrivateMethod() {
+    	PrivateMethodClass classinTest = new PrivateMethodClass();
+    	Assert.assertTrue(Whitebox.&lt;Boolean&gt;invokeMethod(classinTest, "imAPrivateMethod"));
+
+	} 
+} 
 </code></pre>
+
