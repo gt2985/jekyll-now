@@ -14,30 +14,30 @@ Please see below a simple example of how it can be done.
 
 Maven dependencies needed :
 <pre><code>
-	&lt;dependency&gt;
-          &lt;groupId&gt;org.powermock&lt;/groupId&gt;
-          &lt;artifactId&gt;powermock-module-junit4&lt;/artifactId&gt;
-          &lt;version&gt;1.5&lt;/version&gt;
-          &lt;scope&gt;test&lt;/scope&gt;                  
-    &lt;/dependency&gt;
-    &lt;dependency&gt;
-          &lt;groupId&gt;org.powermock&lt;/groupId&gt;
-          &lt;artifactId&gt;powermock-api-mockito&lt;/artifactId&gt;
-          &lt;version&gt;1.5&lt;/version&gt;
-          &lt;scope&gt;test&lt;/scope&gt;
-    &lt;/dependency&gt;  
-    &lt;dependency&gt;
-		&lt;groupId&gt;junit&lt;/groupId&gt;
-		&lt;artifactId&gt;junit&lt;/artifactId&gt;
-		&lt;version&gt;4.11&lt;/version&gt;
-		&lt;scope&gt;test&lt;/scope&gt;
-	&lt;/dependency&gt;
-	&lt;dependency&gt;
-		&lt;groupId&gt;org.hamcrest&lt;/groupId&gt;
-		&lt;artifactId&gt;hamcrest-core&lt;/artifactId&gt;
-		&lt;version&gt;1.3&lt;/version&gt;
-		&lt;scope&gt;test&lt;/scope&gt;
-	&lt;/dependency&gt;
+&lt;dependency&gt;
+	&lt;groupId&gt;org.powermock&lt;/groupId&gt;
+	&lt;artifactId&gt;powermock-module-junit4&lt;/artifactId&gt;
+    &lt;version&gt;1.5&lt;/version&gt;
+    &lt;scope&gt;test&lt;/scope&gt;                  
+&lt;/dependency&gt;
+&lt;dependency&gt;
+     &lt;groupId&gt;org.powermock&lt;/groupId&gt;
+     &lt;artifactId&gt;powermock-api-mockito&lt;/artifactId&gt;
+     &lt;version&gt;1.5&lt;/version&gt;
+     &lt;scope&gt;test&lt;/scope&gt;
+&lt;/dependency&gt;  
+&lt;dependency&gt;
+	&lt;groupId&gt;junit&lt;/groupId&gt;
+	&lt;artifactId&gt;junit&lt;/artifactId&gt;
+	&lt;version&gt;4.11&lt;/version&gt;
+	&lt;scope&gt;test&lt;/scope&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+	&lt;groupId&gt;org.hamcrest&lt;/groupId&gt;
+	&lt;artifactId&gt;hamcrest-core&lt;/artifactId&gt;
+	&lt;version&gt;1.3&lt;/version&gt;
+	&lt;scope&gt;test&lt;/scope&gt;
+&lt;/dependency&gt;
 </code></pre>
 
 Java code for exmaple/reference
@@ -70,4 +70,3 @@ public class PrivateMethodClassTest {
 	} 
 } 
 </code></pre>
-
