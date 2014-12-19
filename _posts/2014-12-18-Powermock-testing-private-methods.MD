@@ -14,7 +14,7 @@ Please see below a simple example of how it can be done.
 
 Maven dependencies needed :
 <pre><code>
-	&lt;dependency&gt;
+&lt;dependency&gt;
           &lt;groupId&gt;org.powermock&lt;/groupId&gt;
           &lt;artifactId&gt;powermock-module-junit4&lt;/artifactId&gt;
           &lt;version&gt;1.5&lt;/version&gt;
