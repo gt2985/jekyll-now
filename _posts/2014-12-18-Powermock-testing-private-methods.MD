@@ -49,10 +49,10 @@ public class PrivateMethodClass {
     private boolean imAPrivateMethod() {
         return true;
     }
-
 }
 ```		
-The junit test class
+The junit test class will like something below.
+Pay attention to the `@RunWith` annotation.
 
 ```java
 import org.junit.Assert;
