@@ -14,7 +14,7 @@ Please see below a simple example of how it can be done.
 
 Maven dependencies needed :
 
-````
+```xml
 		<dependency>
               <groupId>org.powermock</groupId>
               <artifactId>powermock-module-junit4</artifactId>
@@ -39,11 +39,11 @@ Maven dependencies needed :
 			<version>1.3</version>
 			<scope>test</scope>
 		</dependency>
-````       
+```
 
 Java code for exmaple/reference
 The class in test 
-``` java
+```java
 public class PrivateMethodClass {
 
     private boolean imAPrivateMethod() {
