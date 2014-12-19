@@ -13,50 +13,47 @@ Going deeper into continuous delivery, it becomes important to have faster test 
 Please see below a simple example of how it can be done. 
 
 Maven dependencies needed :
-
-```xml
-
-		<dependency>
-              <groupId>org.powermock</groupId>
-              <artifactId>powermock-module-junit4</artifactId>
-              <version>1.5</version>
-              <scope>test</scope>                  
-        </dependency>
-        <dependency>
-              <groupId>org.powermock</groupId>
-              <artifactId>powermock-api-mockito</artifactId>
-              <version>1.5</version>
-              <scope>test</scope>
-        </dependency>  
-        <dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.11</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.hamcrest</groupId>
-			<artifactId>hamcrest-core</artifactId>
-			<version>1.3</version>
-			<scope>test</scope>
-		</dependency>
-        
-```
+<pre><code>
+	&lt;dependency&gt;
+          &lt;groupId&gt;org.powermock&lt;/groupId&gt;
+          &lt;artifactId&gt;powermock-module-junit4&lt;/artifactId&gt;
+          &lt;version&gt;1.5&lt;/version&gt;
+          &lt;scope&gt;test&lt;/scope&gt;                  
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+          &lt;groupId&gt;org.powermock&lt;/groupId&gt;
+          &lt;artifactId&gt;powermock-api-mockito&lt;/artifactId&gt;
+          &lt;version&gt;1.5&lt;/version&gt;
+          &lt;scope&gt;test&lt;/scope&gt;
+    &lt;/dependency&gt;  
+    &lt;dependency&gt;
+		&lt;groupId&gt;junit&lt;/groupId&gt;
+		&lt;artifactId&gt;junit&lt;/artifactId&gt;
+		&lt;version&gt;4.11&lt;/version&gt;
+		&lt;scope&gt;test&lt;/scope&gt;
+	&lt;/dependency&gt;
+	&lt;dependency&gt;
+		&lt;groupId&gt;org.hamcrest&lt;/groupId&gt;
+		&lt;artifactId&gt;hamcrest-core&lt;/artifactId&gt;
+		&lt;version&gt;1.3&lt;/version&gt;
+		&lt;scope&gt;test&lt;/scope&gt;
+	&lt;/dependency&gt;
+</code></pre>
 
 Java code for exmaple/reference
 The class in test 
-```java
+<pre><code>
 public class PrivateMethodClass {
 
     private boolean imAPrivateMethod() {
         return true;
     }
 }
-```		
+</code></pre>	
 The junit test class will like something below.
 Pay attention to the `@RunWith` annotation.
 
-```java
+<pre><code>
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -72,4 +69,4 @@ public class PrivateMethodClassTest {
         Assert.assertTrue(Whitebox.<Boolean>invokeMethod(classinTest, "imAPrivateMethod"));
     }
 }
-```
+</code></pre>
