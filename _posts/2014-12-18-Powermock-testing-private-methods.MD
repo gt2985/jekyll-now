@@ -13,18 +13,19 @@ Going deeper into continuous delivery, it becomes important to have faster test 
 Please see below a simple example of how it can be done. 
 
 Maven dependencies needed :
-<pre><code>
+<pre>
+<code>
 &lt;dependency&gt;
-	&lt;groupId&gt;org.powermock&lt;/groupId&gt;
-	&lt;artifactId&gt;powermock-module-junit4&lt;/artifactId&gt;
+&lt;groupId&gt;org.powermock&lt;/groupId&gt;
+    &lt;artifactId&gt;powermock-module-junit4&lt;/artifactId&gt;
     &lt;version&gt;1.5&lt;/version&gt;
     &lt;scope&gt;test&lt;/scope&gt;                  
 &lt;/dependency&gt;
 &lt;dependency&gt;
-     &lt;groupId&gt;org.powermock&lt;/groupId&gt;
-     &lt;artifactId&gt;powermock-api-mockito&lt;/artifactId&gt;
-     &lt;version&gt;1.5&lt;/version&gt;
-     &lt;scope&gt;test&lt;/scope&gt;
+    &lt;groupId&gt;org.powermock&lt;/groupId&gt;
+    &lt;artifactId&gt;powermock-api-mockito&lt;/artifactId&gt;
+    &lt;version&gt;1.5&lt;/version&gt;
+    &lt;scope&gt;test&lt;/scope&gt;
 &lt;/dependency&gt;  
 &lt;dependency&gt;
 	&lt;groupId&gt;junit&lt;/groupId&gt;
@@ -34,11 +35,12 @@ Maven dependencies needed :
 &lt;/dependency&gt;
 &lt;dependency&gt;
 	&lt;groupId&gt;org.hamcrest&lt;/groupId&gt;
-	&lt;artifactId&gt;hamcrest-core&lt;/artifactId&gt;
-	&lt;version&gt;1.3&lt;/version&gt;
-	&lt;scope&gt;test&lt;/scope&gt;
+    &lt;artifactId&gt;hamcrest-core&lt;/artifactId&gt;
+    &lt;version&gt;1.3&lt;/version&gt;
+    &lt;scope&gt;test&lt;/scope&gt;
 &lt;/dependency&gt;
-</code></pre>
+</code>
+</pre>
 
 Java code for exmaple/reference
 The class in test 
