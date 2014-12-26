@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 
 For a requirement, had to recently make sure that the input data that comes in as a json body needs to be converted into xml to make subequent calls to other services.
@@ -77,4 +77,3 @@ Thus after changing the method above to
 </code></pre>
 
 StringEscapeUtils from apache commons is thank here.
-
