@@ -36,7 +36,7 @@ public class CustomValve extends ValveBase {
 After creating the valve it needs to be registered to the server runtime using the application deployment descriptor. 
 For example in case of jboss, the same can be put in the jboss-web.xml as below:
 
-```xml
+****```xml
    <jboss-web>
     <context-root>/</context-root>
     <valve>
