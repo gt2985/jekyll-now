@@ -1,4 +1,6 @@
 ---
+layout: post
+title: Invalid xml characters in Java for REST 
 published: true
 ---
 
