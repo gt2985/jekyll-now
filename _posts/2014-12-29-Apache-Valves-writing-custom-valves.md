@@ -47,4 +47,4 @@ For example in case of jboss, the same can be put in the jboss-web.xml as below:
 
 This would map the valve to the context-root of the application, whose deplyoment descriptor contains the required entry.
 
-Reference : http://tomcat.apache.org/tomcat-7.0-doc/config/valve.html#Introduction
+Reference : [Tomcat Valves](http://tomcat.apache.org/tomcat-7.0-doc/config/valve.html#Introduction)
