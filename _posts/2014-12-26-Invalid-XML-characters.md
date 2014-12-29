@@ -78,4 +78,4 @@ Thus after changing the method above to
     }   
 </code></pre>
 
-StringEscapeUtils from apache commons is thank here.
+StringEscapeUtils from apache commons comes to rescue here
