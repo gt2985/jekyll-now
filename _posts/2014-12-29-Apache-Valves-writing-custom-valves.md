@@ -1,6 +1,7 @@
 ---
 layout:post
-published: true
+published:true
+title:Apache Valves:Understanding and Writing CustomValve
 ---
 
 Valves provide a means to insert logic and specific handling, into the request processing pipeline. When we need to add something funcationality or check before the request reaches the server in that case, we need to add the same using a valve.
