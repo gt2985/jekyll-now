@@ -1,5 +1,7 @@
 ---
-published: false
+layout: post
+title: Apache Valves : Understanding and writing custom valves
+published: true
 ---
 
 Valves provide a means to insert logic and specific handling, into the request processing pipeline. When we need to add something funcationality or check before the request reaches the server in that case, we need to add the same using a valve.
@@ -35,15 +37,14 @@ public class CustomValve extends ValveBase {
 
 After creating the valve it needs to be registered to the server runtime using the application deployment descriptor. 
 For example in case of jboss, the same can be put in the jboss-web.xml as below:
-
-****```xml
+<pre><code>
    <jboss-web>
     <context-root>/</context-root>
     <valve>
       <class-name>CustomValve</class-name>
     </valve>
   </jboss-web>
-```
+</code></pre>
 
 This would map the valve to the context-root of the application, whose deplyoment descriptor contains the required entry.
 
