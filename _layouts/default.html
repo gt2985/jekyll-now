@@ -2,12 +2,12 @@
 <html>
   <head>
     {% if site.enforce_ssl %}
-	+ <script type="text/javascript">
-	+ var enforce = "{{ site.enforce_ssl }}";
-	+ if ((enforce == window.location.host) && (window.location.protocol != "https:"))
-	+ window.location = window.location.toString().replace(/^http:/, "https:");
-	+ </script>
-	+ {% endif %}
+	<script type="text/javascript">
+	var enforce = "{{ site.enforce_ssl }}";
+	if ((enforce == window.location.host) && (window.location.protocol != "https:"))
+	window.location = window.location.toString().replace(/^http:/, "https:");
+	</script>
+    {% endif %}
     <meta charset="utf-8" />
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
