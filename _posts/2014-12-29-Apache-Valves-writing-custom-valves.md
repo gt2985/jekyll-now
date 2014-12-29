@@ -1,6 +1,6 @@
 ---
-layout: post
-title: Apache Valves : understanding and writing custom vavles
+layout:post
+title: Apache Valves, understanding and writing custom vavles
 published: true
 ---
 
