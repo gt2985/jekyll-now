@@ -1,4 +1,6 @@
 ---
+layout: post
+title:XEE attcks on REST API
 published: false
 ---
 
