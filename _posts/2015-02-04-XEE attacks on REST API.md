@@ -1,10 +1,8 @@
 ---
 layout: post
-title:XEE attcks on REST API
+title:XEE attacks on REST API
 published: false
 ---
-
-## XEE attacks on REST API
 
 Recently while testing my REST API for invalid XML data, I found an XEE susceptibility. 
 
