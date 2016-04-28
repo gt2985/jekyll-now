@@ -5,7 +5,8 @@ permalink: /about/
 published: true
 ---
 
-Agile java developer with more than 7 years of java backend development experience.
+Agile java developer with extensive java backend development experience.
+When not reading or writing software or software design, i like to watch movies. I`m  probably the most unreliable movie reviwer ever.
 
  
 
