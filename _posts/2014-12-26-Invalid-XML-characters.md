@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Invalid xml characters in Java for REST 
+title: XML  Handling invalid  characters
 published: true
 ---
 
