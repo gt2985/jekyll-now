@@ -1,12 +1,12 @@
 ---
 layout: post
-title: XEE attacks on REST API
+title: Prevent XEE attacks for REST API
 published: true
 ---
 
 Recently while testing my REST API for invalid XML data, I found an XEE susceptibility. 
 
-XEE attacks are possible as we send xml payload which get parsed by the parsers at runtime. Major XEE attacks can be clasified as 
+XEE attacks are possible as we send xml payloads which get parsed by the parsers at runtime. Major XEE attacks can be clasified as 
 1. XML Injection Attacks
 2. XML Expansion Attacks
 
@@ -26,31 +26,38 @@ An example payload can be seen as below,
 </CODE>
 </pre>
 
-I found it quite peculiar to ensure that I secure my API from these kind of attacks. 
+I found it quite peculiar to ensure that APIs are secure from these attacks. 
 
-When using RestEasy, the easiest way to do this was to write a customer rest easy content provider, implementing javax.ws.rs.ext.MessageBodyReader<Object> interface.
-
-Then ensuring that the unmarshaller instance that get provided to the contentprovider, has the following flags set on it. 
+When using RestEasy, the easiest way to do this was to write a custom rest easy content provider, implementing
+<pre>
+<CODE>
+javax.ws.rs.ext.MessageBodyReader<Object> interface.
+</CODE>
+</pre>
+Then ensuring that the unmarshaller instance that gets provided to the contentprovider, has the following flags set on it. 
 
 <pre>
 <code>
-		javax.xml.parsers.SAXParserFactory factory = SAXParserFactory.newInstance();
-        factory.setFeature("http://xml.org/sax/features/validation", false);
-        factory.setFeature("http://xml.org/sax/features/namespaces", true);
-        factory.setFeature("http://xml.org/sax/features/external-general-entities", false);
-        factory.setFeature("http://xml.org/sax/features/external-parameter-entities", false);
-        factory.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
-        factory.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
+javax.xml.parsers.SAXParserFactory factory = SAXParserFactory.newInstance();
+factory.setFeature("http://xml.org/sax/features/validation", false);
+factory.setFeature("http://xml.org/sax/features/namespaces", true);
+factory.setFeature("http://xml.org/sax/features/external-general-entities", false);
+factory.setFeature("http://xml.org/sax/features/external-parameter-entities", false);
+factory.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
+factory.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
 </code>
 </pre>
 
-You can use the factory created above to create an XMLReader and use it to unmarshal the xml. 
-<pre><code>
+We can use the factory created above to create an XMLReader and use it to unmarshal the xml. 
+
+<pre>
+<code>
 org.xml.sax.XMLReader reader = factory.newSAXParser().getXMLReader();
-javax.xml.bind.Unmarshaller unmarshaller = getUnMarshaller()//Get the unmarshaller here
+//Get the unmarshaller here
+javax.xml.bind.Unmarshaller unmarshaller = getUnMarshaller();
 //source- variable which get you a reference to the input xml, payload
-unmarshaller.unmarshal(new SAXSource(createXmlReader(), source))
+unmarshaller.unmarshal(new SAXSource(createXmlReader(), source));
+</code>
+</pre>
 
-</code></pre>
-
-Hope that helps you secure your API from the unwanted XML attacks.
+Hope that helps us secure our APIs from unwanted XML attacks.
