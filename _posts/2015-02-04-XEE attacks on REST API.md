@@ -29,11 +29,8 @@ An example payload can be seen as below,
 I found it quite peculiar to ensure that APIs are secure from these attacks. 
 
 When using RestEasy, the easiest way to do this was to write a custom rest easy content provider, implementing
-<pre>
-<CODE>
-javax.ws.rs.ext.MessageBodyReader<Object> interface.
-</CODE>
-</pre>
+<pre><CODE>javax.ws.rs.ext.MessageBodyReader&lt;Object&gt; </CODE></pre> interface.
+
 Then ensuring that the unmarshaller instance that gets provided to the contentprovider, has the following flags set on it. 
 
 <pre>
